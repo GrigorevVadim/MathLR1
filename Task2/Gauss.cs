@@ -4,17 +4,11 @@ namespace MathLR1.Task2
     {
         private int n { get; set; }
         private double[,] A { get; set; } 
-        private double[] result { get; set; }
 
-        public void Init()
+        public Gauss(int n, double[,] A)
         {
-            n = 3;
-            A = new [,]
-            {
-                {2, -0.24, 1}, 
-                {3, 5, -2}, 
-                {1, -4, 10}
-            };
+            this.n = n;
+            this.A = A;
             
             UserConsole.PrintNumber("Порядок системы, n", n);
             UserConsole.PrintMatrix("Матрица системы, A", A, n);

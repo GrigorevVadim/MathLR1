@@ -41,6 +41,7 @@
         <Compile Include="Newton.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SourceData.cs" />
         <Compile Include="UserConsole.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

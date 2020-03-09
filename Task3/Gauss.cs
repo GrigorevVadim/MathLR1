@@ -10,21 +10,12 @@ namespace MathLR1.Task3
 		private double[,] E { get; }
 		private double[,] Inverse { get; set; }
 
-		public Gauss()
+		public Gauss(int n, double[,] A)
 		{
+			this.n = n;
+			this.A = A;
 			E = Constants.GetE();
-		}
-
-		public void Init()
-		{
-			n = 3;
-			A = new[,]
-			{
-				{2, -0.24, 1},
-				{3, 5, -2},
-				{1, -4, 10}
-			};
-
+			
 			UserConsole.PrintNumber("Порядок системы, n", n);
 			UserConsole.PrintMatrix("Матрица системы, A", A, n);
 		}

@@ -7,16 +7,11 @@ namespace MathLR1.Task1
         private double[] b { get; set; }
         private double[] result { get; set; }
 
-        public void Init()
+        public Gauss(int n, double[,] A, double[] b)
         {
-            n = 3;
-            A = new [,]
-            {
-                {2, -0.24, 1}, 
-                {3, 5, -2}, 
-                {1, -4, 10}
-            };
-            b = new double[] {-3, 1, 0};
+            this.n = n;
+            this.A = A;
+            this.b = b;
             
             UserConsole.PrintNumber("Порядок системы, n", n);
             UserConsole.PrintMatrix("Матрица системы, A", A, n);

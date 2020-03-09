@@ -1,11 +1,15 @@
-﻿namespace MathLR1.Task2
+﻿using System;
+using System.Text;
+
+namespace MathLR1.Task2
 {
     internal class Program
     {
         public static void Main()
         {
-            var gauss = new Gauss();
-            gauss.Init();
+            Console.OutputEncoding = Encoding.UTF8;
+            
+            var gauss = new Gauss(SourceData.n, SourceData.A);
             gauss.Triangle();
             gauss.Determenant();
             
