@@ -4,8 +4,7 @@ namespace MathLR1.Task4
 {
     public static class SourceData
     {
-        public static double InvokeSourceFunction(double arg) => 
-            1 / (1 + Math.Log10(arg));
+        public static int Polynomial { get; } = 3;
 
         public static double[] CreateSourceGreed()
         {
@@ -18,12 +17,12 @@ namespace MathLR1.Task4
             return greed;
         }
 
-        public static double[] CreateSourceValues(double[] sourceGreed, Func<double, double> function)
+        public static double[] CreateSourceValues(double[] sourceGreed)
         {
             var resultGreed = new double[sourceGreed.Length];
             for (int i = 0; i < resultGreed.Length; i++)
             {
-                resultGreed[i] = function(sourceGreed[i]);
+                resultGreed[i] = InvokeSourceFunction(sourceGreed[i]);
             }
 
             return resultGreed;
@@ -39,5 +38,8 @@ namespace MathLR1.Task4
 
             return greed;
         }
+        
+        private static double InvokeSourceFunction(double arg) => 
+            1 / (1 + Math.Log10(arg));
     }
 }

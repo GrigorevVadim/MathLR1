@@ -9,9 +9,9 @@ namespace MathLR1.Task4
         {
             Console.OutputEncoding = Encoding.UTF8;
             
-            var polynomial = 3;
+            var polynomial = SourceData.Polynomial;
             var sourceGreed = SourceData.CreateSourceGreed();
-            var sourceValues = SourceData.CreateSourceValues(sourceGreed, SourceData.InvokeSourceFunction);
+            var sourceValues = SourceData.CreateSourceValues(sourceGreed);
             var resultGreed = SourceData.CreateResultGreed();
 
             PrintSource(polynomial, sourceGreed, sourceValues, resultGreed);
@@ -26,6 +26,7 @@ namespace MathLR1.Task4
 
         private static void PrintSource(int polynomial, double[] sourceGreed, double[] sourceValues, double[] resultGreed)
         {
+            UserConsole.PrintString("Входные данные:");
             UserConsole.PrintNumber("Порядок полинома", polynomial);
             UserConsole.PrintVector("Исходная сетка узлов", sourceGreed);
             UserConsole.PrintVector("Значения на исходной сетке", sourceValues);
@@ -34,6 +35,7 @@ namespace MathLR1.Task4
 
         private static void PrintResult(double[] resultGreed, double[] resultValues, double[] resultResidual)
         {
+            UserConsole.PrintString("\nВыходные данные:");
             UserConsole.PrintVector("Новая сетка узлов", resultGreed);
             UserConsole.PrintVector("Pn", resultValues);
             UserConsole.PrintVector("Rn", resultResidual);
