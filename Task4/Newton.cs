@@ -49,7 +49,7 @@ namespace MathLR1.Task4
                 else if (currentSourceElement + _polynomial * 2 > _sourceGreed.Length)
                     currentSourceElement = _sourceGreed.Length - _polynomial;
                 else
-                    currentSourceElement += _polynomial;
+                    currentSourceElement += _polynomial - 1;
             }
         }
 

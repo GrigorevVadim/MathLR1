@@ -16,7 +16,7 @@ namespace MathLR1.Task4
 
             PrintSource(polynomial, sourceGreed, sourceValues, resultGreed);
             
-            var newton = new Newton(3, sourceGreed, sourceValues, resultGreed);
+            var newton = new Newton(polynomial, sourceGreed, sourceValues, resultGreed);
             var (resultValues, resultResidual) = newton.GetResult();
             
             PrintResult(resultGreed, resultValues, resultResidual);
