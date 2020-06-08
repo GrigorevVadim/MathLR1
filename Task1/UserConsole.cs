@@ -27,7 +27,7 @@ namespace MathLR1.Task1
             {
                 for (int j = 0; j < n; j++)
                 {
-                    Console.Write($"{matrix[i,j]} ");
+                    Console.Write($"{matrix[i,j],15:#####0.000000}");
                 }
                 Console.WriteLine();
             }
